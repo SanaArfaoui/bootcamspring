@@ -1,13 +1,18 @@
 <html>
 <head>
 <title>Spring Boot</title>
+
+<link ref="stylesheet" type"text/css" th:href="@{/css/main.css}" />
 </head>
 <body>
 	<h1 align="center">Ma première vue Spring</h1>
 	
 	<h3 th:text="${workshop}" > </h3>
-	
-		<h3 th:text="${tableau}" > </h3>
+	<h2>Liste des formations </h2>
+	<ul>
+	   <li th:each ="name : ${names}" th:text="${name}"> </li>
+	</ul>
+		
 
 </body>
 

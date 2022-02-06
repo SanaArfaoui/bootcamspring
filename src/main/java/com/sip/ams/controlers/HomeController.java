@@ -18,13 +18,13 @@ public class HomeController {
 		
 		String liste[] = new String[]{"OCP","oca","Spring","Angular"};
 		
-		ArrayList arlist = new ArrayList(Arrays.asList(liste));
+		ArrayList names = new ArrayList<String>(Arrays.asList(liste));
 		
 		String formation ="fullstack";
 	System.out.println("méthode info");
 	model.addAttribute("workshop", formation);
 	
-	model.addAttribute("tableau",arlist);
+	model.addAttribute("name",names);
 	   return "home/info" ; // le nom de la template
    }
 	@RequestMapping("/affichage")
