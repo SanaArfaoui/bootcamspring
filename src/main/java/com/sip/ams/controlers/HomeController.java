@@ -10,21 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("/info") //ce que  je tape dans l'url
+	@RequestMapping("/info") //ce que je tappe dans l'url
    public String info(Model model)
    
-   
    {
-		
-		String liste[] = new String[]{"OCP","oca","Spring","Angular"};
-		
-		ArrayList names = new ArrayList<String>(Arrays.asList(liste));
-		
-		String formation ="fullstack";
-	System.out.println("méthode info");
-	model.addAttribute("workshop", formation);
-	
-	model.addAttribute("name",names);
+	 system.out.println("methode info");
 	   return "home/info" ; // le nom de la template
    }
 	@RequestMapping("/affichage")
