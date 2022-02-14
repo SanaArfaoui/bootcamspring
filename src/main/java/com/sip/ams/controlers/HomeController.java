@@ -10,17 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("/info") //ce que je tappe dans l'url
+	@RequestMapping("/information") //ce que je tappe dans l'url
    public String info(Model model)
    
    {
-	 system.out.println("methode info");
+		String formation ="Fullstack";
+	 System.out.println("methode info");
+	 model.addAttribute("workshop",formation);
 	   return "home/info" ; // le nom de la template
    }
 	@RequestMapping("/affichage")
 	   public String affichage()
 	   {
-		 system.out.println("methode affichage");
+		 System.out.println("methode affichage");
 		   return "home/affichage" ;
 	   }
 }
