@@ -14,7 +14,15 @@ public class HomeController {
    public String info(Model model)
    
    {
-		String formation ="Fullstack";
+	
+	ArrayList<String>  names = new ArrayList<>();
+	names.add("OCA");
+	names.add("OCP");
+	names.add("Spring");
+	names.add("Angular");
+	model.addAttribute("names", names);
+	
+	String formation ="Fullstack";
 	 System.out.println("methode info");
 	 model.addAttribute("workshop",formation);
 	   return "home/info" ; // le nom de la template
