@@ -17,7 +17,7 @@
 	</ul>
 	
 	<h4 align="center"> Formulaire d'inscrption </h4>
-	<form>
+	<form methode="POST" th:action ="@{/result}"> <!--la methode d'envoi c'est un post je vais poster les inputs vers une méthode qui a un path /result qu'on va construire dans le controleur'-->
 	<div class="container">
 		<div class ="row" style="margin-bottom:5px">
 			<div class ="col-6" align="right">

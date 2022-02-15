@@ -6,9 +6,19 @@ import java.util.Arrays;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
+	
+	@RequestMapping("/result")
+	@ResponseBody
+	public String resultat(@RequestParam("nom") String n,@RequestParam("email") String e)
+	{
+		return "Vous avez tapé un nom :"+n+" et un email :"+e ;
+	}
+	
 	
 	@RequestMapping("/information") //ce que je tappe dans l'url
    public String info(Model model)
